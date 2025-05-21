@@ -22,8 +22,8 @@ export function Frameworks() {
   ];
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40}>
+    <div className="relative flex left-4 h-[15rem] w-full flex-col items-center justify-center">
+      <OrbitingCircles iconSize={35} >
         {skills.map((skill, index) => (
           <Icon key={index} src={`/assets/logos/${skill}.svg`} />
         ))}

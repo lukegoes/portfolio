@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import confetti from "canvas-confetti";
 
 const email = "luklg@outlook.com";
 
@@ -10,10 +11,18 @@ const CopyEmailButton = () => {
     navigator.clipboard.writeText(email);
     setCopied(true);
 
+    confetti({
+      particleCount: 80,
+      spread: 70,
+      origin: { y: 0.6 }, // ponto vertical mais próximo do botão
+    });
+
     setTimeout(() => {
       setCopied(false);
     }, 2000);
   };
+
+  
 
   return (
     <motion.button
