@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Moderno", "Seguro", "Escalável"];
+  const words = ["Interfaces", "Experiências", "Soluções"];
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
@@ -19,7 +20,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Olá, eu sou o Luc
+          Olá, eu sou o Lucas
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -29,25 +30,25 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Dev Full Stack em formação
+            Dev Full-Stack
+          </motion.p>
+           <motion.p className="text-4xl font-medium text-neutral-300"
+          variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 1.5 }}>
+            que transforma ideias em
           </motion.p>
           <motion.div
           variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1.5 }}>
+            transition={{ delay: 1.8 }}>
             <FlipWords
               words={words}
               className="font-black text-white text-8xl"
             />
           </motion.div>
-          <motion.p className="text-4xl font-medium text-neutral-300"
-          variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}>
-            Web Solutions
-          </motion.p>
         </div>
       </div>
 
@@ -57,7 +58,7 @@ const HeroText = () => {
         variants={variants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 1 }}>Olá, eu sou o Luc</motion.p>
+            transition={{ delay: 1 }}>Olá, eu sou o Lucas</motion.p>
         <div>
           <motion.p className="text-5xl font-black text-neutral-300"
           variants={variants}
